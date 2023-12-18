@@ -1,49 +1,54 @@
 import { benefits } from "../page/tet";
-import { MdDone } from "react-icons/md";
-import Line from "./Line";
-
+import { TiInputCheckedOutline } from "react-icons/ti";
+import Benef from "../image/animation.svg";
+import Reveal from "../utils/Reveal";
 
 function Pbo() {
   return (
-    <section id="benefits" className="p-9 font-inter">
-      <div className="text-center">
-        <div className="flex flex-col items-center">
-          <h1 className=" text-3xl font-semibold">PBO</h1>
-          <div className="mr-[2rem] bg-white w-[2rem]">
-            <Line />
-          </div>
+    <section className=" flex md:flex-row flex-col items-center justify-center font-inter py-16 border-b border-slate-700 px-9">
+      <Reveal>
+        <div className=" flex-1">
+          <img src={Benef} alt="" />
         </div>
+      </Reveal>
 
-        <p className="mt-3 md:w-[40%] mx-auto">
-          Joining The PBO  has enormous advantages for all
-          participants and ordinary Nigerians’ lives can be transformed from the
-          ordinary to the extraordinary with the following {""}
-          <strong className=" bg-yellow-500 rounded-md text-black p-1">
-            benefits:
-          </strong>
-        </p>
-      </div>
-      <div className=" md:grid md:grid-cols-3 md:grid-rows-3 mt-3 gap-4 items-center">
-        {benefits.map((benefit) => {
-          return (
-            <div
-              key={benefit.id}
-              className="flex justify-between p-4 bg-black text-white rounded-lg hover:transform hover:scale-105 duration-1000 shadow-[inset_5px_6px_10px_0px_#1a202c] mt-3"
-            >
-              <div>
-                <MdDone size={30} color="green" />
-              </div>
-              <div>
-                {benefit.text}{" "}
-                <strong className="rounded-md bg-yellow-500 ounded-md text-black p-1">
-                  {benefit.style}
-                </strong>
-              </div>
-            </div>
-          );
-        })}
+      <div className=" md:w-[50%]">
+        <Reveal>
+          <div className="text-center">
+            <p className="mt-3  mx-auto font-semibold">
+              "Unlocking incredible transformation for ordinary Nigerian lives -
+              that's the power of joining the PBO, with amazing." {""}
+              <strong className="text-[#FFD700] rounded-md  p-1">
+                benefits:
+              </strong>
+            </p>
+          </div>
+        </Reveal>
+
+        <div className=" mt-3">
+          {benefits.slice(1, 5).map((benefit) => {
+            return (
+              <Reveal>
+                <div
+                  key={benefit.id}
+                  className="flex justify-between p-4 bg-black text-white rounded-lg hover:transform hover:scale-105 duration-1000 mt-1"
+                >
+                  <div>
+                    <TiInputCheckedOutline size={30} color="green" />
+                  </div>
+                  <div>
+                    {benefit.text}{" "}
+                    <strong className="rounded-md text-[#FFD700] ounded-md p-1">
+                      {benefit.style}
+                    </strong>
+                  </div>
+                </div>
+              </Reveal>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
 }
-export default Pbo
+export default Pbo;

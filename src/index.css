@@ -32,5 +32,24 @@ html, body{
   background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 90%);
   height: 100%; 
   }
+
+  .slide{
+    transform: scale(0.4);
+    transition: transform 300ms;
+    opacity: 0.5
+  }
+
+  .activeSlide{
+    transform: scale(0.6);
+    opacity: 1
+  }
+
+  .active{
+    color: #FFD700;
+    transition: ease-in duration(0.5)
+  }
 }
 
+/* .slick-slide > div {
+   margin: 0 10px;
+} */

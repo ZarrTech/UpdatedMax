@@ -2,17 +2,24 @@ import { AiOutlineInstagram } from 'react-icons/ai'
 import { BiLogoTelegram } from 'react-icons/bi'
 import { BsWhatsapp } from "react-icons/bs";
 import { navs } from '../page/tet';
+import Design from './Design';
+
+
 export default function Footer() {
     
   return (
     <section
       id="contact"
-      className="shadow-[2px_6px_20px_9px_#1a202c]  px-9 flex md:flex-row flex-col gap-3 font-inter justify-around items-center py-3 "
+      className=" relative border-t border-slate-700 px-9 flex md:flex-row flex-col gap-3 font-inter justify-around items-center py-3 overflow-y-hidden bg-[#0d0d0d]"
     >
+      {/* <div className="">
+        <Design />
+      </div> */}
+
       <ul className=" text-sm text-center">
         {navs.map((nav) => {
           return (
-            <li key={nav.name} className="mb-2 text-[0.7rem]">
+            <li key={nav.name} className="mb-2 text-[18px] font-medium active:">
               <a href={nav.link}>{nav.name}</a>
             </li>
           );
@@ -22,7 +29,7 @@ export default function Footer() {
       <div className="flex flex-col items-center">
         <h4 className=" font-semibold mb-2">CONTACT</h4>
         <p className="mb-2">+2349099999827</p>
-        <p className="mb-2">totalprofits@gmail.com</p>
+        <p className="mb-2">engineerofoegbu@gmail.com</p>
       </div>
 
       <div className=" flex flex-col items-center">

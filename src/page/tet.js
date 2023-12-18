@@ -5,8 +5,6 @@ import proof3 from '../image/socialproof3.jpg'
 import proof4 from '../image/socialproof4.jpg'
 import proof5 from '../image/socialproof5.jpg'
 import proof6 from '../image/socialproof6.jpg'
-import proof7 from '../image/socialproof7.jpg'
-import proof8 from '../image/socialproof8.jpg'
 import proof9 from "../image/socialproof9.jpg";
 import unlucky from '../image/unlucky.webp'
 import ambaWithBoss from '../image/pwanBossAndAmbass.webp'
@@ -39,19 +37,22 @@ export const testimonials = [
 ];
 
 export const images = [
-  
   {
     img: proof4,
   },
-  
+
+  {
+    img: proof6,
+  },
+
   {
     img: proof6,
   },
   {
-    img: proof7,
+    img: proof1,
   },
   {
-    img: proof8,
+    img: proof2,
   },
   {
     img: proof9,
@@ -136,10 +137,52 @@ export const links = [
 ];
 
 export const navs = [
-  { name: "HOME", link: "#home" },
-  { name: "ABOUT", link: "#about" },
-  { name: "PBO BENEFITS", link: "#benefits" },
-  { name: "TESTIMONIALS", link: "#testimonials" },
-  { name: "TRAINING", link: "#training" },
-  { name: "CONTACT", link: "#contact" },
+  { name: "Home", link: "/" },
+  { name: "About", link: "about" },
+  { name: "Chat Bot", link: "chatbot" },
+  { name: "Gallery", link: "gallery" },
+  { name: "Play Max", link: "playMax" },
 ];
+
+export const Faq = [
+  {
+    question: " can i join this training from anywhere in the world?",
+    answer:
+      "yes, our trainings are fully optimized to hold online. For more inquiries about how to get started, visit our ABOUT page or talk to max, our AI virtual assistant",
+  },
+
+  {
+    question: "will i make 1 million in 3 months if I join this training?",
+    answer:
+      "yes , if u apply our tried and proven sales strategies DAILY for three months. For more inquiries about how to get started, visit our ABOUT page or talk to max, our AI virtual assistant",
+  },
+
+  {
+    question: "How much do i neeed to get started?",
+    answer:
+      "to get started you need just #1,650 to be part of this great opportunity.For more inquiries about how to get started, visit our ABOUT page or talk to max, our AI virtual assistant",
+  },
+];
+
+export const Lists = [
+  "Personal Development",
+  "Emotional Intelligence",
+  "Emotional Intelligence",
+  "Visual storytelling",
+  "Email marketing",
+  "How to sell like an igbo man",
+  "Real Estate Network Marketing",
+  "Land measurement, documentation and titles ",
+];
+
+export const aboutText = [
+  "Ever felt stuck in life's 'Rat-race'? Picture this: being homeless, working without pay, attempting failed businesses, and grappling with fear and hunger. I've been there, and I know the desperation of needing a turnaround.Then came my game-changing decision: real estate. Louis Glickman's words resonate deeply: 'The best investment on earth is earth.'",
+  
+  "Imagine securing your retirement by buying land young, selling it for vast profits later.Here's the magic: nabbing five plots, selling three for a windfall, and crafting your dream home on the remaining two.But that's just the beginning! Lease your property for passive income, and at your discretion, sell it for even more profit.In a world of investment options, real estate reigns supreme. My passion ? Unleashing your full potential.",
+  
+  "After collaborating directly with PWAN Group's billionaire chairman, I've mastered the art of guaranteeing 1 million naira in three months through real estate. Let me introduce you to a life-changing opportunity, a chance to secure your financial future and make homeownership a reality.This venture, born over 11 years ago in a humble restaurant corner, PWAN has blossomed into Africa's premier real estate firm. Operating across 30 Nigerian states, Ghana, the US, UK, and Dubai, it's birthed more millionaires than you can imagine.",
+  
+  "Enter the PWAN Business Owners(PBO) platform: the world's pioneering real estate network marketing company.PWAN, short for Property World Africa Network, is our pride and foundation, shaping the future of real estate investment, development, and marketing from Lagos, Nigeria. Dr.Augustine Onwumere, our visionary founder, extends his impact beyond real estate, championing education and healthcare.Recognized by the Lagos Business School, various local and international organizations, and governments for his philanthropy, he's rightfully dubbed 'Mr.Empowerment.'Even if you're financially stable, bypassing real estate full-time or part-time is shortchanging your future.",
+
+  "Come aboard the PBO platform, where we're set to create more millionaires than any other network marketing system globally.Join us on this journey toward financial independence.Let PWAN Group be your catalyst for unlocking a prosperous tomorrow."
+]

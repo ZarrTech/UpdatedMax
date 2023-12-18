@@ -1,73 +1,67 @@
-import { links } from "../page/tet";
-import Line from "./Line";
-import ambaWithBoss from "../image/pwanBossAndAmbass.webp";
-import book from '../image/book cover 2.webp'
+import { images } from "../page/tet";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { useState } from "react";
 
 function Training() {
-  const lists = [
-    { name: "Personal Development" },
-    { name: "Emotional Intelligence" },
-    { name: "Knowing What You Really Want in Life - Discovering Yourself" },
-    { name: "How to Attract Everything You Want to Yourself" },
-    { name: "Real Estate Network Marketing" },
-    { name: "Why Sales - How to Sell" },
-    { name: "Recruitment, Secrets to Generational Legacy" },
-    { name: "Land & Everything You Need to Know About It" },
-    { name: "Advertising Online & Offline (How to Sell to Nigerians)" },
-    { name: "Developing Entrepreneurial Mindset" },
-  ];
-
+  const [imageIndex, setImageIndex] = useState(0)
+  const settings = {
+    lazyLoad: true,
+    centerMode: true,
+    autoplay: true,
+    infinite: true,
+    centerPadding: 0,
+    slidesToShow: 3,
+    speed: 2000,
+    autoplaySpeed: 3000,
+    cssEase: "linear",
+    responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ],
+    beforeChange: (current, next) => setImageIndex(next),
+  };
   return (
-    <section id="training" className=" p-9 font-inter md:text-center">
-      <div>
-        <h1 className=" text-3xl font-semibold">
-          Want to Join The PBO Plus Network?
-        </h1>
-        <div className="bg-white inline-block mb-3">
-          <Line />
-        </div>
-      </div>
-
-      <div className="mt-3 md:w-[400px] mx-auto">
-        <img className=" w-full rounded-2xl" src={ambaWithBoss} alt="pbo" />
-      </div>
-      <p className="mt-3">
-        I meant what I said in the heading, you can secure your financial future
-        forever by learning investment secrets no school will ever teach you.
-        You can join the PBO Plus network by being part of a special 5-day
-        training organized by{" "}
-        <strong>Mr. empowerment himself Dr. Augustine Onwumere.</strong>
-      </p>
-
-      <div className=" mt-3">
-        {links.map((link, index) => {
-          return (
-            <div key={index} className="mt-3">
-              <p>{link.text}</p>
-              <a className=" text-blue-600" href={link.anchor}>
-                {link.click}
-              </a>
+    <section className=" w-full items-centerfont-inter py-16 border-t border-slate-700 px-9">
+      <h1 className=" font-bold text-4xl mb-3 text-center font-inter text-[#FFD700]">
+        Testimonials
+      </h1>
+      <div className=" mx-auto block justify-center items-center px-9">
+        <Slider {...settings}>
+          {images.map((image, index) => (
+            <div
+              className={`w-[500px] ${
+                index === imageIndex ? "slide activeSlide" : "slide"
+              }`}
+              key={index}
+            >
+              <img className="" src={image.img} alt="images" />
             </div>
-          );
-        })}
-      </div>
-
-      <div>
-        <h4 className=" font-normal text-2xl mt-3">
-          Some of The Things You Will Be Learning at The PBO Plus Training.
-        </h4>
-        <div className="mt-3 md:w-[400px] mx-auto">
-          <img className="w-full rounded-2x1" src={book} alt="book Cover" />
-        </div>
-        <ul className="mt-3 md:flex flex-col items-center">
-          {lists.map((list, index) => {
-            return (
-              <li className=" list-disc" key={index}>
-                {list.name}
-              </li>
-            );
-          })}
-        </ul>
+          ))}
+        </Slider>
       </div>
     </section>
   );
