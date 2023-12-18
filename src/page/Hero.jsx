@@ -1,7 +1,7 @@
 
 import {BsWhatsapp} from 'react-icons/bs'
-import { motion, useInView, useAnimation, delay } from "framer-motion";
-import { useEffect, useRef, Suspense } from 'react';
+
+import {  Suspense } from 'react';
 import { Canvas } from "@react-three/fiber";
 import {Pbo, Reuse, FAQ, Benefits, Training, Testimonials, Avatar, MyLoader, Reveal} from './index'
 

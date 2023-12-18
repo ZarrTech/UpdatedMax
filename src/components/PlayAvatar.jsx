@@ -45,7 +45,7 @@ const MaxAvatar = () => {
           >
             moves
           </button>
-          <div className=" mt-7">use on desktop for beter experience</div>
+          <div className=" mt-7 md:hidden">use on desktop for beter experience</div>
         </Html>
       </group>
     </>

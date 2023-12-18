@@ -2,8 +2,6 @@ import { AiOutlineInstagram } from 'react-icons/ai'
 import { BiLogoTelegram } from 'react-icons/bi'
 import { BsWhatsapp } from "react-icons/bs";
 import { navs } from '../page/tet';
-import Design from './Design';
-
 
 export default function Footer() {
     
@@ -12,9 +10,6 @@ export default function Footer() {
       id="contact"
       className=" relative border-t border-slate-700 px-9 flex md:flex-row flex-col gap-3 font-inter justify-around items-center py-3 overflow-y-hidden bg-[#0d0d0d]"
     >
-      {/* <div className="">
-        <Design />
-      </div> */}
 
       <ul className=" text-sm text-center">
         {navs.map((nav) => {
